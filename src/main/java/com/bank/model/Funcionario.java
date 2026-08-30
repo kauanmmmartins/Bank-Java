@@ -6,12 +6,14 @@ public class Funcionario extends Pessoa {
     private Cargo cargo;
     private Double salario;
     private Setor setor;
+    private Long id;
 
-    public Funcionario (Cargo cargo,Double salario, Setor setor,String nome,String cpf, String email, LocalDate dataNascimento){
+    public Funcionario (Cargo cargo,Double salario, Setor setor,String nome,String cpf, String email, LocalDate dataNascimento, Long id){
         super(nome, cpf, email, dataNascimento);
         this.cargo = cargo;
         this.salario = salario;
         this.setor = setor;
+        this.id = id;
     }
     public Funcionario(){
 
@@ -29,6 +31,10 @@ public class Funcionario extends Pessoa {
         return setor;
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public void setCargo(Cargo cargo) {
         this.cargo = cargo;
     }
@@ -39,5 +45,9 @@ public class Funcionario extends Pessoa {
 
     public void setSetor(Setor setor) {
         this.setor = setor;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
