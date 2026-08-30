@@ -2,7 +2,7 @@ package com.bank.model;
 
 import java.time.LocalDate;
 
-public class Pessoa {
+public abstract class  Pessoa {
     private String nome;
     private String cpf;
     private String email;

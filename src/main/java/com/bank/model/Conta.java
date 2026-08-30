@@ -2,7 +2,7 @@ package com.bank.model;
 
 import java.math.BigDecimal;
 
-public class Conta {
+public abstract class Conta {
     private String cpfTitular;
     private Long numeroConta;
     private BigDecimal saldo;
@@ -49,4 +49,16 @@ public class Conta {
     public void setIdAgencia(Long idAgencia) {
         this.idAgencia = idAgencia;
     }
-}
+
+    public void credito(BigDecimal valor){
+        BigDecimal novoSaldo = getSaldo().add(valor);
+        setSaldo(novoSaldo);
+    }
+    public abstract void debito(BigDecimal valor);
+
+    public void tranferir(BigDecimal valor, Conta contaDestino){
+        debito(valor);
+        contaDestino.credito(valor);
+
+        }
+    }
