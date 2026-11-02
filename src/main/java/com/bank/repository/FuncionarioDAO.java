@@ -11,7 +11,7 @@ public interface FuncionarioDAO {
 
     public void delFuncionario(Long id);
 
-    public boolean updateFuncionario(Funcionario funcionario);
+    public boolean updateFuncionario(Funcionario funcionario,  String cpf);
 
     public void addFuncionario(Funcionario funcionario);
 

@@ -56,7 +56,7 @@ public abstract class Conta {
     }
     public abstract void debito(BigDecimal valor);
 
-    public void tranferir(BigDecimal valor, Conta contaDestino){
+    public void transferir(BigDecimal valor, Conta contaDestino){
         debito(valor);
         contaDestino.credito(valor);
 

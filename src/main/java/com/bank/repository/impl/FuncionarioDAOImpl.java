@@ -30,12 +30,20 @@ public class FuncionarioDAOImpl implements FuncionarioDAO {
     }
 
     @Override
-    public boolean updateFuncionario(Funcionario funcionario) {
+    public boolean updateFuncionario(Funcionario funcionario,String cpf ) {
+        for (Funcionario atual : dataBase){
+            if (atual.getCpf().equals(cpf)){
+                atual = funcionario;
+                return true;
+            }
+        }
         return false;
     }
 
+
     @Override
     public void addFuncionario(Funcionario funcionario) {
+        dataBase.add(funcionario);
 
     }
 

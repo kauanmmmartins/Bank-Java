@@ -32,4 +32,16 @@ public class AgenciaDAOImpl implements AgenciaDAO {
     public Map< Long ,Agencia> getAllAgencias() {
         return this.dataBase;
     }
+
+    @Override
+    public Agencia atulizarAgencia(Agencia novaAgencia, Long id) {
+        if(dataBase.containsKey(id)){
+            dataBase.put(id,novaAgencia);
+            return novaAgencia;
+        }
+        return null;
+
+
+    }
+
 }

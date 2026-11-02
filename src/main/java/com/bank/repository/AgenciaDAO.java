@@ -13,4 +13,6 @@ public interface AgenciaDAO {
     public Agencia getAgencia(Long id);
 
     public Map<Long,Agencia> getAllAgencias();
+
+    public Agencia atulizarAgencia(Agencia novaAgencia,Long id);
 }
